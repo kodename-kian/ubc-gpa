@@ -1,0 +1,30 @@
+
+.header {
+  float: top;
+}
+
+.bin {
+  position: relative;
+  float: right;
+}
+
+.course-box {
+  /*display: inline-block;*/
+  border: 5px solid #333;
+  width: 30%;
+  height: 100px;
+}
+
+.course-details-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.course-detail {
+  width: 50px;
+}
+
+input {
+  size: 50px;
+}
