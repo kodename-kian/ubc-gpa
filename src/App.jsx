@@ -1,35 +1,47 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './Header.jsx'
+import Term from './Term.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  //useStates
+  const [terms, setTerms] = useState(0);
+  const [allTerms, setAllTerms] = useState(Array(0));
+  const [totalScore, setTS] = useState(1);
+  const [totalCredits, setTC ] = useState(2);
+
+  //add term function
+  function addTerm(){
+    setAllTerms( [...allTerms, (<div key={terms}> <Term /> </div>) ]);
+    setTerms( terms+1 );
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <Header />
+
+      <Summary totalScore={totalScore} totalCredits={totalCredits} />
+
+      {allTerms}
+
+      <div> 
+        <button onClick={()=> addTerm()}>
+          Add Term 
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </>
   )
+}
+
+function Summary({totalScore, totalCredits}){
+  if( totalCredits == 0 ){
+    return (<div> Please add credits to calculate your average! </div> );
+  }
+  else{
+    return (<div> Your total average is {totalScore/totalCredits}! </div> );
+  }
+
 }
 
 export default App
