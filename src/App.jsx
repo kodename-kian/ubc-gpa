@@ -43,10 +43,41 @@ function App() {
     setTGPA(superSc/superCr);
   }
 
+  function darkMode() {
+    if (document.getElementById("darkScreen").style.width == "100%") {
+      document.getElementById("darkScreen").style.width = "0";
+    }
+    else {
+      document.getElementById("darkScreen").style.width = "100%";
+    }
+  }
+      
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
 
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
 
   return (
     <>
+
+      <div id="darkScreen" class="darkScreen"></div>
+      <img src="menu.png" class="menu" onClick={()=>openNav()}/>
+
+      <div id="mySidenav" class="sidenav">
+       <img src="back.png" class="back" onClick={()=>closeNav()} width="30px" height="30px" />
+       <select class="font-menu">
+           <option value="Arial">Arial</option>
+           <option value="Times New Roman">Times New Roman</option>
+           <option value="...">...</option>
+       </select>
+       <button class="dark-mode" onClick={()=>darkMode()}>Dark Mode (WIP)</button>
+      </div>
+
+
       <Header />
 
       <Summary tGPA={tGPA}/>
