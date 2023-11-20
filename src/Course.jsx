@@ -1,10 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './Course.css'
 
-function Course() {
-  const [count, setCount] = useState(0)
+function Course({num, usf, ucf}) {
+  const [count, setCount] = useState(0);
+
+  function updCred(val){
+    ucf(num,val);
+  }
+
+  function updScor(val){
+    usf(num,val);
+  }
 
   return (
     <>
@@ -22,14 +28,14 @@ function Course() {
         <form class="course-details-box">
 
           <label class="course-detail">
-            <input type="number" id="credits" name="credits" placeholder="Credits" />
+            <input type="number" id="credits" name="credits" onChange={(e) => (updCred(e.target.value))} placeholder="Credits"/>
           </label>
 
           <label class="course-detail">
-            <input type="number" id="percentage" name="percentage" placeholder="Grade Percentage" />
+            <input type="number" id="percentage" name="percentage" onChange={(e) => (updScor(e.target.value))} placeholder="Grade Percentage" />
           </label>
 
-          <select class="letter-grade-select course-detail">
+{/*          <select class="letter-grade-select">
             <option value="A+">A+</option>
             <option value="A">A</option>
             <option value="A-">A-</option>
@@ -41,7 +47,7 @@ function Course() {
             <option value="C-">C-</option>
             <option value="D">D</option>
             <option value="F">F</option>
-          </select>
+          </select>*/}
 
         </form>
 

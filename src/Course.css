@@ -1,6 +1,7 @@
 
 .header {
   float: top;
+  align-content: left;
 }
 
 .bin {
@@ -10,9 +11,12 @@
 
 .course-box {
   /*display: inline-block;*/
-  border: 5px solid #333;
-  width: 30%;
-  height: 100px;
+  border: 3px solid #333;
+  width: 300px;
+  height: 70px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 .course-details-box {
