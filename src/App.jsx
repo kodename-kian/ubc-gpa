@@ -1,16 +1,15 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './Header.jsx'
 import Term from './Term.jsx'
 
 function App() {
 
   //useStates
-  const [terms, setTerms] = useState(1);
-  const [allTerms, setAllTerms] = useState([]);
+  const [terms, setTerms] = useState(2);
+  const [allTerms, setAllTerms] = useState([1]);
 
-  const [totalScore, setTS] = useState([]);
-  const [totalCredits, setTC ] = useState([]);
+  const [totalScore, setTS] = useState([0]);
+  const [totalCredits, setTC ] = useState([0]);
 
   const [tGPA, setTGPA] = useState(0);
 
@@ -60,9 +59,10 @@ function App() {
         })}
       </div>
 
-      <div> 
-        <button onClick={()=> addTerm()}>
-          Add Term 
+      <div class="wrapper"> 
+        <button class="termButton" onClick={()=> addTerm()}>
+          <img width="40px" height="40px" class="buttonIcon" src="public/plus.png" />
+          <span class="buttonText"> Add Term  </span>
         </button>
       </div>
 
@@ -71,7 +71,11 @@ function App() {
 }
 
 function Summary({tGPA}){
-  return (<div> Your Overall GPA: {tGPA} </div>);
+  return (<div class="gpaText"> Your Overall GPA: {tGPA} </div>);
+}
+
+function Header(){
+  return (<h1 class="header"> UBC GPA Calculator </h1>);
 }
 
 export default App

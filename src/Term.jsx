@@ -51,7 +51,7 @@ function Term({num, key, upd}) {
     <>
       <div class="term">
         
-        TERM {num}: GPA: {gpa}
+        <div class="termText"> TERM {num}: GPA: {gpa} </div>
 
         <div class="courseBlock">
           {allCourses.map((course, index) => {
@@ -63,8 +63,9 @@ function Term({num, key, upd}) {
         </div>
 
         <div> 
-          <button onClick={()=> addCourse()}>  
-            Add Course
+          <button class="termButton" onClick={()=> addCourse()}>  
+            <img width="40px" height="40px" class="buttonIcon" src="public/plus.png" />
+            <span class="buttonText"> Add Course </span>
           </button>
 
         </div>

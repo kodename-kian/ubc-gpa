@@ -1,6 +1,6 @@
 
 
-.term{
+/*.term{
   background: skyblue;
   color: black;
   display: block;
@@ -14,11 +14,61 @@
   font-size: 15px;
   transition: 0.3s;
   padding: 20px;
+}*/
+
+.term {
+  background-color: rgb(201, 219, 243);
+  border-radius: 20px;
+  width: 850px;
+  border: 3px solid gray;
+  box-shadow: 5px 5px 5px grey;
+  padding: 20px;
+  margin: 20px;
 }
+
 
 .courseBlock{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
+
+.termButton {
+  margin-top: 5px;
+  background-color: rgb(62, 96, 130);
+  display: flex;
+  color: white;
+  height: 60px;
+  width: 200px;
+  border-radius: 50px;
+  margin-left: 100px;
+  font-size: 18px;
+  transition: 0.3s;
+  box-shadow: 3px 3px 3px grey;
+}
+
+.buttonIcon {
+  float: right;
+  position: relative;
+  right: 10px;
+  bottom: 2px;
+}
+
+.buttonText {
+  margin-right: 3px;
+  margin-left: 16px;
+  margin-top: 8px;
+  text-align: right;
+}
+
+.termText{
+  padding-bottom: 30px;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  top: 15px;
+  font-weight: bold;
+  color: darkblue;
+}
+

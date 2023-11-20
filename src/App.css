@@ -4,3 +4,52 @@
   padding: 2rem;
   text-align: center;
 }
+
+
+.termButton {
+  margin-top: 40px;
+  background-color: rgb(62, 96, 130);
+  display: flex;
+  color: white;
+  height: 60px;
+  width: 300px;
+  border-radius: 50px;
+  margin-right: 60px;
+  font-size: 18px;
+  transition: 0.3s;
+  box-shadow: 3px 3px 3px grey;
+}
+
+.buttonIcon {
+  float: right;
+  position: relative;
+  right: 10px;
+  bottom: 2px;
+}
+
+.buttonText {
+  margin-right: 3px;
+  margin-left: 16px;
+  margin-top: 8px;
+  text-align: right;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.header{
+  font-family: Arial, Sans-Serif;
+  color: #092042;
+  margin-left: 20px;
+}
+
+.gpaText{
+  padding-bottom: 15px;
+  font-size: 35px;
+  top: 10px;
+  font-weight: bold;
+  color: darkblue;
+}
