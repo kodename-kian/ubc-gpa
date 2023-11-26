@@ -64,7 +64,7 @@ function Term({num, key, upd}) {
 
         <div> 
           <button class="termButton" onClick={()=> addCourse()}>  
-            <img width="40px" height="40px" class="buttonIcon" src="public/plus.png" />
+            <img width="40px" height="40px" class="buttonIcon" src="/static/images/plus.png" />
             <span class="buttonText"> Add Course </span>
           </button>
 

@@ -15,7 +15,7 @@ function Course({num, usf, ucf}) {
   return (
     <>
       <div class="courseBox">
-        <div class="bin"> <img class="bin" src="/public/bin.png" width="30px" height="30px" /> </div>
+        <div class="bin"> <img class="bin" src="/static/images/bin.png" width="30px" height="30px" /> </div>
 
         <div class="courseContent">
 
@@ -36,21 +36,6 @@ function Course({num, usf, ucf}) {
             <label class="courseDetail">
               <input type="number" class="numInputG" id="percentage" name="percentage" onChange={(e) => (updScor(e.target.value))} placeholder="Grade Percentage" />
             </label>
-
-
-{/*          <select class="letter-grade-select">
-            <option value="A+">A+</option>
-            <option value="A">A</option>
-            <option value="A-">A-</option>
-            <option value="B+">B+</option>
-            <option value="B">B</option>
-            <option value="B-">B-</option>
-            <option value="C+">C+</option>
-            <option value="C">C</option>
-            <option value="C-">C-</option>
-            <option value="D">D</option>
-            <option value="F">F</option>
-          </select>*/}
 
          </form>
         </div>
