@@ -65,10 +65,10 @@ function App() {
     <>
 
       <div id="darkScreen" class="darkScreen"></div>
-      <img src="menu.png" class="menu" onClick={()=>openNav()}/>
+      <img src="/static/images/menu.png" class="menu" onClick={()=>openNav()}/>
 
       <div id="mySidenav" class="sidenav">
-       <img src="back.png" class="back" onClick={()=>closeNav()} width="30px" height="30px" />
+       <img src="/static/images/back.png" class="back" onClick={()=>closeNav()} width="30px" height="30px" />
        <select class="font-menu">
            <option value="Arial">Arial</option>
            <option value="Times New Roman">Times New Roman</option>
@@ -92,7 +92,7 @@ function App() {
 
       <div class="wrapper"> 
         <button class="termButton" onClick={()=> addTerm()}>
-          <img width="40px" height="40px" class="buttonIcon" src="public/plus.png" />
+          <img width="40px" height="40px" class="buttonIcon" src="/static/images/plus.png" />
           <span class="buttonText"> Add Term  </span>
         </button>
       </div>
